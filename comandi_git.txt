@@ -63,7 +63,7 @@ possiamo fare add, commit e finalizzare la feature tramite
 
 git flow feature finish new_feature
 Nota: il branch feature viene localmente eliminato in quanto mergiato con develop
-In più viene fatto lo switch su develop
+In più viene fatto lo switch su develop che ora deve essere ripushato su github
 
 #eventualmente per pubblicare e scaricare una feature (in modo da renderla disponibile 
 ad altri prima di finalizzarla) possiamo usare:
