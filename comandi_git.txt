@@ -59,12 +59,16 @@ git push --set-upstream origin develop
 git flow feature start new_feature
 
 #dopo aver modificato e/o aggiunto file alla nostra working directory
-dobbiamo fare add, commit e finalizzare la feature tramite
+possiamo fare add, commit e finalizzare la feature tramite
 
 git flow feature finish new_feature
-
 Nota: il branch feature viene localmente eliminato in quanto mergiato con develop
-In più viene fatto lo swith su develop
+In più viene fatto lo switch su develop
+
+#eventualmente per pubblicare e scaricare una feature (in modo da renderla disponibile 
+ad altri prima di finalizzarla) possiamo usare:
+git flow feature publish MYFEATURE
+git flow feature pull origin MYFEATURE
 
 #Ora dobbiamo pushare develop su github
 git push origin
