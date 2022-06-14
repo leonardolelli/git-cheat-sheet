@@ -90,3 +90,8 @@ Basta mettere un tag nella prima linea, salvare e chiudere. Gli altri prompt pos
 git push origin
 
 Ora abbiamo i due rami main e develop aggiornati con le funzionalita aggiunte nella release
+
+---------------------------------- LINK UTILI -------------------------------------
+
+GIT FLOW: https://danielkummer.github.io/git-flow-cheatsheet/index.it_IT.html
+GIT/GITHUB: https://education.github.com/git-cheat-sheet-education.pdf
