@@ -1,0 +1,92 @@
+------------------------- github -------------------------
+
+#configurazione
+git config --global user.name "nome"
+git config --global user.email "email"
+
+#inizializzazione (spostati all'interno della cartella di lavoro)
+git init .
+
+#aggiunta dei file alla staging area
+git add .
+
+#per fare l'aggiunta di tutti i file (es. da una cartella interna)
+git add -A
+
+#commit dei file
+git commit -m "messaggio"
+
+#per vedere file aggiunti,committati e non
+git status
+
+#per fare l'unstage dei file aggiunti
+git rm --cached .
+
+#per vedere le commit
+git log
+
+#per vedere le differenze tra file committed e quelli nella working directory
+git diff
+
+#modificare il messaggio dell'ultima commit
+git commit --amend -m "messaggio"
+
+#push
+git push -u origin main (solo la prima volta che si pusha la repo locale su github)
+git push
+
+#pull
+git pull
+
+#per vedere i branch disponibili
+git branch -a
+
+#per cambiare branch
+git checkout nome_branch
+
+------------------------- git flow ------------------------- 
+
+#Controlla l’esistenza dei rami master e develop e 
+li crea automaticamente nel caso non ci fossero. 
+Possiamo lasciare le impostazioni di default.
+
+git flow init
+
+#pushiamo il branch develop su github
+git push --set-upstream origin develop 
+
+#quando sviluppiamo una nuova feature creiamo un feature branch (si sposta automaticamente su questo ramo)
+git flow feature start new_feature
+
+#dopo aver modificato e/o aggiunto file alla nostra working directory
+dobbiamo fare add, commit e finalizzare la feature tramite
+
+git flow feature finish new_feature
+
+Nota: il branch feature viene localmente eliminato in quanto mergiato con develop
+In più viene fatto lo swith su develop
+
+#Ora dobbiamo pushare develop su github
+git push origin
+
+#per creare una branch di release (es versione 1.2)
+git flow release start 1.2
+
+#per pusharla su github (solo la prima volta poi basta git push origin)
+git push --set-upstream origin release/1.2
+
+#prima di finalizzare il branch è meglio impostare notepad++ come editor git al posto di vim
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+#Per finalizzarlo (anche dopo n push), ovvero rilasciare una nuova versione del nostro progetto
+git flow release finish '1.2'
+
+Nota: con questo comando andiamo a mergiare release con develop e poi con master.
+Dopodiché il branch release viene eliminato.
+Quando facciamo partire il comando ci verrà chiesto di mettere un messaggio di tag e altre cose.
+Basta mettere un tag nella prima linea, salvare e chiudere. Gli altri prompt possono essere chiusi direttamente.
+
+#Infine facciamo una push del main
+git push origin
+
+Ora abbiamo i due rami main e develop aggiornati con le funzionalita aggiunte nella release
