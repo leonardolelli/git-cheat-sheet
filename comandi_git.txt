@@ -63,7 +63,11 @@ possiamo fare add, commit e finalizzare la feature tramite
 
 git flow feature finish new_feature
 Nota: il branch feature viene localmente eliminato in quanto mergiato con develop
+<<<<<<< HEAD
 In più viene fatto lo switch su develop
+=======
+In più viene fatto lo switch su develop che ora deve essere ripushato su github
+>>>>>>> feature/new_f
 
 #eventualmente per pubblicare e scaricare una feature (in modo da renderla disponibile 
 ad altri prima di finalizzarla) possiamo usare:
@@ -99,3 +103,4 @@ Ora abbiamo i due rami main e develop aggiornati con le funzionalita aggiunte ne
 
 GIT FLOW: https://danielkummer.github.io/git-flow-cheatsheet/index.it_IT.html
 GIT/GITHUB: https://education.github.com/git-cheat-sheet-education.pdf
+SSH KEYS: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
