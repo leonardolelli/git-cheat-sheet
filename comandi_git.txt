@@ -44,6 +44,9 @@ git branch -a
 #per cambiare branch
 git checkout nome_branch
 
+#per creare un nuovo branch
+git checkout -b nuovo_branch
+
 ------------------------- git flow ------------------------- 
 
 #Controlla l’esistenza dei rami master e develop e 
