@@ -104,6 +104,15 @@ git push origin
 
 Ora abbiamo i due rami main e develop aggiornati con le funzionalita aggiunte nella release
 
+#caricare il git ignore ed eliminare i file da esclduere
+touch .gitignore (da editare, alcuni template https://www.toptal.com/developers/gitignore)
+
+#elimino file
+git ls-files -i -c --exclude-from=.gitignore | xargs git rm --cached
+git add .
+git commit -m "deleted useless folders and files"
+git push origin
+
 ---------------------------------- LINK UTILI -------------------------------------
 
 GIT FLOW: https://danielkummer.github.io/git-flow-cheatsheet/index.it_IT.html
