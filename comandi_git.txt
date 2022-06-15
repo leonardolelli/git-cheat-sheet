@@ -13,14 +13,20 @@ git add .
 #per fare l'aggiunta di tutti i file (es. da una cartella interna)
 git add -A
 
+#per fare l'unstage dei file aggiunti
+git restore --staged .
+
 #commit dei file
 git commit -m "messaggio"
 
+# per annullare una commit
+git reset -soft HEAD^ #riporta la situazione a prima dell'ultima commit (^^ a quella ancora prima ecc)
+git reset # riporta la situazione a prima della add
+git reset -hard #cancella anche eventuali file aggiunti non presenti nelle commit precedenti (attenzione!)
+
+
 #per vedere file aggiunti,committati e non
 git status
-
-#per fare l'unstage dei file aggiunti
-git rm --cached .
 
 #per vedere le commit
 git log
@@ -103,3 +109,11 @@ Ora abbiamo i due rami main e develop aggiornati con le funzionalita aggiunte ne
 GIT FLOW: https://danielkummer.github.io/git-flow-cheatsheet/index.it_IT.html
 GIT/GITHUB: https://education.github.com/git-cheat-sheet-education.pdf
 SSH KEYS: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+$ eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+
+
+
+
